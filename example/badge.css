@@ -1,0 +1,32 @@
+/*
+ * @name Badge
+ * @description Standard badge
+ *
+ * @state -rounded - rounded badge
+ * @state -new - new badge
+ *
+ * @markup
+ *  <span class='badge-example'>5</span>
+ */
+
+.badge-example {
+    display: inline-block;
+    padding: 0 .5em;
+    line-height: 1.5;
+    font-size: .8rem;
+    text-align: center; 
+    color: #FFFFFF;
+    background: #839788;
+    border-radius: 0;
+    vertical-align: middle;
+    transform: translateY(-.1em);
+}
+
+.badge-example.-rounded {
+    border-radius: .75rem;
+}
+
+.badge-example.-new:after {
+    content: ' new';
+}
+

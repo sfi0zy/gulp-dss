@@ -1,0 +1,27 @@
+{
+  "name": "gulp-dss",
+  "version": "1.0.0",
+  "description": "A gulp plugin to build UI documentation with the DSS parser + handlebars",
+  "main": "index.js",
+  "author": {
+    "name": "Ivan Bogachev",
+    "email": "sfi0zy@gmail.com",
+    "url": "https://sfi0zy.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sfi0zy/gulp-dss"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "copy-dir": "^0.3.0",
+    "dss": "^1.0.4",
+    "gulp-util": "^3.0.8",
+    "handlebars": "^4.0.11",
+    "path": "^0.12.7",
+    "through": "^2.3.8"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

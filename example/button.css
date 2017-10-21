@@ -1,0 +1,46 @@
+/*
+ * @name Button
+ * @description Standard button
+ *
+ * @state -small - smaller button
+ * @state -dangerous - dangerous button
+ *
+ * @markup
+ *  <button class='button-example'>button</button>
+ */
+
+.button-example {
+    display: inline-block;
+    position: relative;    
+    padding: 0 1em;
+    font-size: 1rem;
+    line-height: 2;
+    text-decoration: none;
+    text-align: center;
+    color: #272932;
+    background: #E7ECEF;
+    border: none;
+    border-radius: .2rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button-example:hover,
+.button-example:focus {
+    background: #C0C4C6;
+}
+
+.button-example.-small {
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+
+.button-example.-dangerous {
+    color: #FFFFFF;
+    background: #F05D5E;
+}
+
+.button-example.-dangerous:hover,
+.button-example.-dangerous:focus {
+    background: #BC3C3C;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+        <meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1'>
+
+        <title>gulp-dss styleguide</title>  
+
+        <link rel='stylesheet' href='./assets/css/muilessium-0.2.0.min.css'>
+
+        <link rel='stylesheet' href='../example/button.css'>
+        <link rel='stylesheet' href='../example/badge.css'>
+    </head>
+    <body>
+        <div class='mui-scroll-fix'></div>
+
+        <header class='mui-page-header -black-bg'>
+            <div class='mui-content-container'>
+                <div class='mui-header-logo'>
+                    <a class='link -white -f-grey-3' href='/'>
+                        <h1 class='_bigger-1 _line-4r'>
+                            <span>gulp-dss</span>
+                            <span class='_smaller-2'>v.1.0.0</span>
+                        </h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class='mui-page-container'>
+            <div class='mui-content-container _separate-1'>
+                <div class='mui-row _separate-2'>
+                    <div class='mui-column -s12'>
+                        <h2 class='_bigger-1'>Description</h2>
+                        <p class='mui-p _separate-1'>A gulp plugin that builds UI documentation based on the DSS parser</p>
+                    </div>
+                </div>
+
+                <div class='mui-row _separate-2'>
+                    <div class='mui-column -s12'>
+                        <h2 class='_bigger-1'>Table of contents</h2>
+                        <ul class='mui-list _separate-1 _smaller-1'>
+                                    <li class='item'>
+                                        <a class='-f-grey-3' href='#Badge'>Badge</a>
+                                    </li>
+                                    <li class='item'>
+                                        <a class='-f-grey-3' href='#Button'>Button</a>
+                                    </li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                        <div class='mui-row _separate-2'>
+                            <div class='mui-column -s12'>
+                                <h2 id='Badge' class='_bigger-1'>Badge</h2>
+                                <div class='-grey-3 _smaller-2'>example/badge.css</div>
+                                    <p class='mui-p _separate-1'>Standard badge</p>
+                                    <div class='_separate-1'>
+                                        <div class='example _separate-2'><span class='badge-example'>5</span></div>
+                                            <div class='_separate-2'>
+                                                <h5 class='_smaller-1'> with -rounded option</h5>
+                                                <div class='js-example _separate-2' data-class='-rounded'><span class='badge-example'>5</span></div>
+                                            </div>
+                                            <div class='_separate-2'>
+                                                <h5 class='_smaller-1'> with -new option</h5>
+                                                <div class='js-example _separate-2' data-class='-new'><span class='badge-example'>5</span></div>
+                                            </div>
+                                        <div class='mui-spoiler'>
+                                            <div class='title -f-grey-3'>Source code</div>
+                                            <div class='content'>
+                                                <div class='-grey-1-bg _separate-2 _smaller-1'>
+                                                    <div class='mui-row'>
+                                                        <div class='mui-column -s12 -with-gutter _separate-1'>
+                                                            <pre class='prettyprint lang-html markup'>&lt;span class='badge-example'&gt;5&lt;/span&gt;</pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class='mui-row _separate-2'>
+                            <div class='mui-column -s12'>
+                                <h2 id='Button' class='_bigger-1'>Button</h2>
+                                <div class='-grey-3 _smaller-2'>example/button.css</div>
+                                    <p class='mui-p _separate-1'>Standard button</p>
+                                    <div class='_separate-1'>
+                                        <div class='example _separate-2'><button class='button-example'>button</button></div>
+                                            <div class='_separate-2'>
+                                                <h5 class='_smaller-1'> with -small option</h5>
+                                                <div class='js-example _separate-2' data-class='-small'><button class='button-example'>button</button></div>
+                                            </div>
+                                            <div class='_separate-2'>
+                                                <h5 class='_smaller-1'> with -dangerous option</h5>
+                                                <div class='js-example _separate-2' data-class='-dangerous'><button class='button-example'>button</button></div>
+                                            </div>
+                                        <div class='mui-spoiler'>
+                                            <div class='title -f-grey-3'>Source code</div>
+                                            <div class='content'>
+                                                <div class='-grey-1-bg _separate-2 _smaller-1'>
+                                                    <div class='mui-row'>
+                                                        <div class='mui-column -s12 -with-gutter _separate-1'>
+                                                            <pre class='prettyprint lang-html markup'>&lt;button class='button-example'&gt;button&lt;/button&gt;</pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+
+        <footer class='mui-page-footer -white -black-bg _text-center'>
+            <div class='mui-content-container'>
+                <span class='_line-3r'>Copyright &copy; Your Company</span>
+            </div>
+        </footer>
+
+        <script src='./assets/js/muilessium-0.2.0.min.js'></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var _ = Muilessium.Utils;
+
+                function initExamples() {
+                    _.forEach(document.querySelectorAll('.js-example'), function(example) {
+                        var stateClass = _.getAttribute(example, 'data-class'),
+                            targetChild = 0;
+                        if (example.childNodes[1]) {
+                            targetChild = 1;
+                        }
+                        _.addClass(example.childNodes[targetChild], stateClass);
+                    });
+                }
+
+                initExamples();
+            });
+        </script>
+    </body>
+</html>

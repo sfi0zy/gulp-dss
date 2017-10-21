@@ -27,7 +27,7 @@ gulp.task('dss', function() {
     return gulp.src('./src/**/*.css')
         .pipe(dss({
             // index.handlebars will be used as template
-            template: './src/dss',
+            templatePath: './src/dss',
             parsers: parsers,
             outputPath: './docs'
         }))

@@ -24,7 +24,7 @@ module.exports = function(options) {
 
     function process(file) {
         dss.parse(file.contents.toString(), {}, function (parsed) {
-            parsed.file = path.relative(__dirname, file.path);
+            parsed.file = path.relative('.', file.path);
             styleguide.push(parsed);
         });
     }

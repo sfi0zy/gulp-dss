@@ -1,6 +1,6 @@
 {
   "name": "gulp-dss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A gulp plugin to build UI documentation with the DSS parser + handlebars",
   "main": "index.js",
   "author": {

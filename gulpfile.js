@@ -1,13 +1,10 @@
-'use strict'
+const gulp = require('gulp');
+const dss  = require('./');
 
-var gulp = require('gulp')
-var dss = require('./')
 
-gulp.task('default', function() {
-
+gulp.task('default', () => {
   return gulp.src('./example/*')
     .pipe(dss())
-    .pipe(gulp.dest('./docs/'))
-
-})
+    .pipe(gulp.dest('./docs/'));
+});
 

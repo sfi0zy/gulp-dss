@@ -37,3 +37,14 @@ gulp.task('dss', function() {
 
 **DSS** Supports CSS, LESS, STYLUS, SASS and SCSS comment block syntax.
 
+## Development
+
+```sh
+git clone https://github.com/sfi0zy/gulp-dss.git
+cd gulp-dss
+npm i
+npm run build-example
+```
+
+It will generate an example in the *docs* directory.
+

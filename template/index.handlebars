@@ -6,7 +6,7 @@
 
         <title>{{project.name}} styleguide</title>  
 
-        <link rel='stylesheet' href='./assets/css/muilessium-0.2.0.min.css'>
+        <link rel='stylesheet' href='https://unpkg.com/muilessium/dist/css/muilessium.min.css'>
 
         <link rel='stylesheet' href='../example/button.css'>
         <link rel='stylesheet' href='../example/badge.css'>
@@ -14,10 +14,10 @@
     <body>
         <div class='mui-scroll-fix'></div>
 
-        <header class='mui-page-header -black-bg'>
+        <header class='mui-page-header'>
             <div class='mui-content-container'>
                 <div class='mui-header-logo'>
-                    <a class='link -white -f-grey-3' href='/'>
+                    <a class='link' href='/'>
                         <h1 class='_bigger-1 _line-4r'>
                             <span>{{project.name}}</span>
                             <span class='_smaller-2'>v.{{project.version}}</span>
@@ -43,7 +43,7 @@
                             {{#files}}
                                 {{#blocks}}
                                     <li class='item'>
-                                        <a class='-f-grey-3' href='#{{name}}'>{{name}}</a>
+                                        <a href='#{{name}}'>{{name}}</a>
                                     </li>
                                 {{/blocks}}
                             {{/files}}
@@ -66,17 +66,17 @@
                                         <div class='example _separate-2'>{{{ markup.example }}}</div>
                                         {{#state}}
                                             <div class='_separate-2'>
-                                                <h5 class='_smaller-1'>{{ ../../name }} with {{name}} option</h5>
+                                                <h5 class='_smaller-1'>Variant: {{name}}</h5>
                                                 <div class='js-example _separate-2' data-class='{{name}}'>{{{ ../markup.example }}}</div>
                                             </div>
                                         {{/state}}
                                         <div class='mui-spoiler'>
-                                            <div class='title -f-grey-3'>Source code</div>
+                                            <div class='title'>Source code</div>
                                             <div class='content'>
                                                 <div class='-grey-1-bg _separate-2 _smaller-1'>
                                                     <div class='mui-row'>
                                                         <div class='mui-column -s12 -with-gutter _separate-1'>
-                                                            <pre class='prettyprint lang-html markup'>{{{markup.escaped}}}</pre>
+                                                            <pre>{{{markup.escaped}}}</pre>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,25 +92,30 @@
             </div>
         </div>
 
-        <footer class='mui-page-footer -white -black-bg _text-center'>
+        <footer class='mui-page-footer'>
             <div class='mui-content-container'>
-                <span class='_line-3r'>Copyright &copy; Your Company</span>
+                <span class='_line-3r'>@sfi0zy</span>
             </div>
         </footer>
 
-        <script src='./assets/js/muilessium-0.2.0.min.js'></script>
+
+
+
+        <script src='https://unpkg.com/muilessium/dist/js/muilessium.min.js'></script>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var _ = Muilessium.Utils;
+                var _ = Muilessium.UTILS;
 
                 function initExamples() {
                     _.forEach(document.querySelectorAll('.js-example'), function(example) {
                         var stateClass = _.getAttribute(example, 'data-class'),
                             targetChild = 0;
+
                         if (example.childNodes[1]) {
                             targetChild = 1;
                         }
+
                         _.addClass(example.childNodes[targetChild], stateClass);
                     });
                 }
